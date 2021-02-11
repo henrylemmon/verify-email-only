@@ -13,11 +13,11 @@ class VerifyEmail extends Mailable
 
     public $signedURL;
 
-  /**
-   * Create a new message instance.
-   *
-   * @param $signedURL
-   */
+    /**
+     * Create a new message instance.
+     *
+     * @param $signedURL
+     */
     public function __construct($signedURL)
     {
         $this->signedURL = $signedURL;

@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::post('/verify-email', [SendEmailVerificationEmailController::class, '__invoke'])
-  ->name('verify-email');
+    ->name('verify-email');
 
 Route::get('/save-email', [SaveVerifiedEmailController::class, '__invoke'])
-  ->name('save-email');
+    ->name('save-email');

@@ -1,12 +1,12 @@
 @component('mail::message')
-  # Introduction
+# Introduction
 
-  The body of your message.
+The body of your message.
 
-  @component('mail::button', ['url' => $signedURL])
-    Verify Email
-  @endcomponent
+@component('mail::button', ['url' => $signedURL])
+Verify Email
+@endcomponent
 
-  Thanks,<br>
-  {{ config('app.name') }}
+Thanks,<br>
+{{ config('app.name') }}
 @endcomponent
