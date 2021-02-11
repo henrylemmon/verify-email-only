@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SaveVerifiedEmailController;
+use App\Http\Controllers\SendEmailVerificationEmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/verify-email', [SendEmailVerificationEmailController::class, '__invoke'])
+  ->name('verify-email');
+
+Route::get('/save-email', [SaveVerifiedEmailController::class, '__invoke'])
+  ->name('save-email');
